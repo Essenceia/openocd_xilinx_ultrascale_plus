@@ -1,1 +1,8 @@
 .openocd.cfg.swp
+.Xil
+*.log
+*.jou
+prj
+*.html
+*.xml
+out
