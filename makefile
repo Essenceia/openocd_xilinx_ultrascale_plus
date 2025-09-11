@@ -11,6 +11,8 @@ SRC_PATH=src
 OUT_DIR=out
 
 
+all: setup build gen
+
 $(VIVADO_PRJ_PATH):  
 	mkdir -p $(VIVADO_PRJ_DIR)
 	$(VIVADO_CMD) setup.tcl -tclargs $(VIVADO_PRJ_DIR) $(VIVADO_PRJ_NAME)
@@ -28,7 +30,6 @@ $(OUT_DIR)/$(VIVADO_PRJ_NAME).bit: $(VIVADO_CHECKPOINT_PATH)
 
 gen: $(OUT_DIR)/$(VIVADO_PRJ_NAME).bit
 
-all: setup bulid gen
 
 clean: 
 	rm -rf $(VIVADO_PRJ_DIR)
